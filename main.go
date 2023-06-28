@@ -136,6 +136,10 @@ func parseRiskRating(riskRating string) string {
 		return "Low"
 	}
 
+	if riskRating == "Standard" {
+		return "info"
+	}
+
 	log.Fatal("Error Parsing Unknown Risk Rating: " + riskRating)
 
 	panic("Invalid Risk Rating")
